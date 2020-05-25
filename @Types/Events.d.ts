@@ -1,3 +1,6 @@
+import Client from '@scripts/Client'
+import ClientEvent from '@components/ClientEvent'
+
 export type Events = 'rateLimit' | 'ready' | 'resumed' | 'guildCreate' | 'guildDelete' | 'guildUpdate' | 'inviteCreate' | 'inviteDelete'
   | 'guildUnavailable' | 'guildMemberAdd' | 'guildMemberRemove' | 'guildMemberUpdate' | 'guildMemberAvailable' | 'guildMemberSpeaking'
   | 'guildMembersChunk' | 'guildIntegrationsUpdate' | 'roleCreate' | 'roleDelete' | 'roleUpdate' | 'emojiCreate' | 'emojiDelete'
@@ -6,3 +9,7 @@ export type Events = 'rateLimit' | 'ready' | 'resumed' | 'guildCreate' | 'guildD
   | 'messageReactionRemoveAll' | 'userUpdate' | 'presenceUpdate' | 'voiceStateUpdate' | 'subscribe' | 'unsubscribe'
   | 'typingStart' | 'webhookUpdate' | 'disconnect' | 'reconnecting' | 'error' | 'warn' | 'debug' | 'shardDisconnect'
   | 'shardError' | 'shardReconnecting' | 'shardReady' | 'shardResume' | 'invalidated' | 'raw'
+
+export interface ExtendableEvent {
+  new (client: Client): ClientEvent
+}

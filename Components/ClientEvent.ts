@@ -15,7 +15,7 @@ export default class ClientEvent {
     throw Error('Not implemented')
   }
 
-  public async init () {
+  public init () {
     this.client.on(this.event as any, (...args) => {
       this.handler(this.client, ...args)
     })

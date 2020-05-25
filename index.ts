@@ -1,5 +1,5 @@
 import BotClient from './Scripts/Client'
-import { EventHandler as InitEventHandler } from './Scripts/EventHandler'
+import InitEventHandler from './Scripts/InitEventHandler'
 
 ;(async () => {
   require('console-stamp')(console)
