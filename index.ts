@@ -1,4 +1,5 @@
 import BotClient from './Scripts/Client'
+import { EventHandler as InitEventHandler } from './Scripts/EventHandler'
 
 ;(async () => {
   require('console-stamp')(console)
@@ -9,9 +10,7 @@ import BotClient from './Scripts/Client'
     fetchAllMembers: true
   })
 
-  client.on('ready', async () => {
-    console.info(`You're login as ${client.user!.tag}`)
-  })
+  InitEventHandler(client)
 
   client.login(process.env.TOKEN)
 })()
