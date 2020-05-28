@@ -1,4 +1,4 @@
-import ClientEvent from '../ClientEvent'
+import ClientEvent from '@components/ClientEvent'
 import Client from '@scripts/Client'
 
 export default class Ready extends ClientEvent {
