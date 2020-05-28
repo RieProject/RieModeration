@@ -14,8 +14,7 @@
         "@components/*": ["Components/*"],
         "@scripts/*": ["Scripts/*"],
         "@ty/*": ["@Types/*"]
-      },
-      "experimentalDecorators": true
+      }
     },
     "include": [
       "./**/*.ts",
