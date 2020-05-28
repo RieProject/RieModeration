@@ -3,13 +3,13 @@ import { ExtendableEvent } from '@ty/Events'
 import FS from 'fs'
 
 export default function (client: BotClient): void {
-  FS.readdir('./Components/Event/', (err, files) => {
+  FS.readdir('./App/Event/', (err, files) => {
     if (err) console.error(err)
 
     files.forEach(file => {
-      const EventClass: ExtendableEvent = require(`@components/Event/${file}`).default
-      const ev = new EventClass(client)
-      ev.init()
+      const EventClass: ExtendableEvent = require(`../App/Event/${file}`).default
+      const ev = new EventClass()
+      ev.init(client)
     })
   })
 }

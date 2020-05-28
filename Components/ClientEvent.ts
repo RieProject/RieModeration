@@ -3,21 +3,18 @@ import Client from '@scripts/Client'
 
 export default class ClientEvent {
   private event: Events
-  private client: Client
 
-  constructor (client: Client, event: Events) {
+  constructor (event: Events) {
     this.event = event
-    this.client = client
   }
 
-  public async handler (...args: any[]): Promise<void> {
-    console.log(args)
+  public async handler (..._args: any[]): Promise<void> {
     throw Error('Not implemented')
   }
 
-  public init () {
-    this.client.on(this.event as any, (...args) => {
-      this.handler(this.client, ...args)
+  public init (client: Client) {
+    client.on(this.event as any, (...args) => {
+      this.handler(client, ...args)
     })
   }
 }

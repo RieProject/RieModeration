@@ -1,9 +1,9 @@
-import ClientEvent from '../ClientEvent'
+import ClientEvent from '../../Components/ClientEvent'
 import Client from '@scripts/Client'
 
 export default class Ready extends ClientEvent {
-  constructor (client: Client) {
-    super(client, 'ready')
+  constructor () {
+    super('ready')
   }
 
   async handler (client: Client) {

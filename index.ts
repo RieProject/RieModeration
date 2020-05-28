@@ -1,5 +1,6 @@
 import BotClient from './Scripts/Client'
 import InitEventHandler from './Scripts/InitEventHandler'
+import InitLoadCommand from './Scripts/InitLoadCommand'
 
 ;(async () => {
   require('console-stamp')(console)
@@ -11,6 +12,7 @@ import InitEventHandler from './Scripts/InitEventHandler'
   })
 
   InitEventHandler(client)
+  InitLoadCommand(client)
 
   client.login(process.env.TOKEN)
 })()

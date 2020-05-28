@@ -1,4 +1,3 @@
-import Client from '@scripts/Client'
 import ClientEvent from '@components/ClientEvent'
 
 export type Events = 'rateLimit' | 'ready' | 'resumed' | 'guildCreate' | 'guildDelete' | 'guildUpdate' | 'inviteCreate' | 'inviteDelete'
@@ -11,5 +10,5 @@ export type Events = 'rateLimit' | 'ready' | 'resumed' | 'guildCreate' | 'guildD
   | 'shardError' | 'shardReconnecting' | 'shardReady' | 'shardResume' | 'invalidated' | 'raw'
 
 export interface ExtendableEvent {
-  new (client: Client): ClientEvent
+  new (): ClientEvent
 }
