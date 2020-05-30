@@ -1,6 +1,7 @@
 import Client from '@scripts/Client'
 import { Message } from 'discord.js'
 import { CommandOptions } from '@ty/Command'
+import { Arguments as ArgsArguments } from 'yargs-parser'
 
 export default class CommandHandler {
   public options: CommandOptions
@@ -9,7 +10,7 @@ export default class CommandHandler {
     this.options = options
   }
 
-  public execute (_client: Client, _message: Message, _args: string[]): Promise<void> {
+  public execute (_client: Client, _message: Message, _args: ArgsArguments): Promise<void> {
     throw new Error('Not implemented')
   }
 }

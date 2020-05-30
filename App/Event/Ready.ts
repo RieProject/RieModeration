@@ -7,6 +7,6 @@ export default class Ready extends ClientEvent {
   }
 
   async handler (client: Client) {
-    console.log(`You're login as ${client.user?.tag}.`)
+    console.info(`You're login as ${client.user?.tag}.`)
   }
 }
