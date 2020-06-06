@@ -10,7 +10,7 @@ export default class CommandHandler {
     this.options = options
   }
 
-  public execute (_client: Client, _message: Message, _args: ArgsArguments): Promise<void> {
+  public execute (_client: Client, _message: Message, _args: ArgsArguments): Promise<any> {
     throw new Error('Not implemented')
   }
 }

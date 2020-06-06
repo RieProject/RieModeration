@@ -8,7 +8,7 @@ export default class ClientEvent {
     this.event = event
   }
 
-  public async handler (..._args: any[]): Promise<void> {
+  public async handler (..._args: any[]): Promise<any> {
     throw Error('Not implemented')
   }
 

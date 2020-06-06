@@ -4,5 +4,6 @@ export interface IConfig {
   bot_prefix: string
   color: string
   maintener: string[]
+  cooldown_default: number
   /* eslint-enable */
 }

@@ -2,8 +2,8 @@
   "bot_name": "RieModeration",
   "bot_prefix": "rm",
   "color": "0xa731de",
+  "cooldown_default": 5,
   "maintener": [
-    "379616881272946688",
-    "337028800929857536"
+    "379616881272946688"
   ]
 }

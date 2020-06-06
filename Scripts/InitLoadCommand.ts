@@ -1,6 +1,7 @@
 import BotClient from './Client'
 import FS from 'fs'
 import CommandHandler from '@components/CommandHandler'
+import UsageFactory from '../Components/Plugin/UsageFactory'
 
 export default function (client: BotClient): void {
   FS.readdir('./App/Command/', (err, categories) => {
@@ -19,6 +20,7 @@ export default function (client: BotClient): void {
 
           // Load Command
           const cmdString = typeof cmd.options.name === 'string' ? cmd.options.name : cmd.options.name[0]
+          cmd.options.usage = UsageFactory(client, cmd)
           client.commands.command.set(cmdString, cmd)
 
           // Load aliases

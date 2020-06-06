@@ -4,7 +4,7 @@ import InitLoadCommand from './Scripts/InitLoadCommand'
 
 ;(async () => {
   require('console-stamp')(console)
-  require('dotenv').config()
+  require('dotenv/config')
   require('module-alias/register')
   if (process.argv[2] === 'dev') {
     process.env.DEV = 'true'

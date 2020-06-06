@@ -4,9 +4,11 @@ export interface CommandOptions {
   name: string | string[]
   description: string
   args?: Arguments[]
-  botPermission?: PermissionString
-  userPermission?: PermissionString
+  botPermission?: PermissionString[]
+  userPermission?: PermissionString[]
   enableDM?: boolean
+  ownerOnly?: boolean
+  cooldown?: number
 
   /**
    * Auto generated when imported
@@ -15,7 +17,6 @@ export interface CommandOptions {
 }
 
 export interface Arguments {
-  isFlag: boolean
-  name: string
-  defaultValue?: string
+  optional?: string[] | string
+  required?: string[] | string
 }
